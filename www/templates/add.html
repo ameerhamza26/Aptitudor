@@ -1,0 +1,57 @@
+<ion-view view-title="Subjects">
+<div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+     Select Class
+    </div>
+    <select ng-model="ddlclassData" ng-options="c.Id as c.Name for c in classData track by c.Id" ng-change="GetValue()">
+    </select>
+  </label>
+
+</div>
+<div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+     Select Subjects
+    </div>
+    <select ng-model="ddlsubjectData" ng-options="c.Id as c.Name for c in subjectData track by c.Id" ng-change="GetValue()">
+    </select>
+  </label>
+
+</div>
+
+<div class="list">
+
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="questions" placeholder="Enter No Of Questions">
+    </label>
+	 <button class="button button-small" ng-click="create()">
+      Submit
+    </button>
+  </div>
+
+</div>
+
+
+<div class="list" ng-show="value">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+     Select Chapters 
+    </div>
+      <select ng-model="ddlchapterData" ng-options="c.Id as c.Name for c in chapterData track by c.Id" ng-change="GetValue()">
+    </select
+  </label>
+
+</div>
+<div ng-show="buttonsVal">
+	<addbuttonsbutton></addbuttonsbutton>
+    <div id="space-for-buttons"></div>
+
+</div>
+
+
+</ion-view>
